@@ -9,7 +9,7 @@ int RegexCheck(const char *original_regex_str){  //Check the regex santax ,retur
         return -1;
     for (int i = 0; i < strlen(original_regex_str); i++) {
         if (original_regex_str[i] == '*'&&original_regex_str[i - 1] == '*')
-        return -1;
+            return -1;
     }
     return 0;
 }
@@ -28,9 +28,9 @@ char* RegexStringRevise(const char *original_regex_str) {  //Delete the repeated
             }
         }
         else {
-        temp[j] = original_regex_str[i];
-        i++;
-        j++;
+            temp[j] = original_regex_str[i];
+            i++;
+            j++;
         }
     }
     temp[j] = '\0';
@@ -73,7 +73,7 @@ bool BitCompare(char **original_str,char **regex_str, char *allowed, int n) { //
                 if (k != n - 1) {
                     (*original_str)++;
                     (*regex_str) += k * 2;
-                return true;
+                    return true;
                 }
                 else {
                     (*regex_str) += k * 2;  //exit the * algorithm
