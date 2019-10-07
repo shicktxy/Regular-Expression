@@ -5,7 +5,7 @@
 #include<stdbool.h>
 
 bool isMatch(char *s, char *p) {
-	if (*p == '\0')
+if (*p == '\0')
 		return *s == '\0';
 	bool match = (*s != '\0') && (*p == *s || *p == '.');  //realize the matching of '.'
 	if (strlen(p) >= 2 && p[1] == '*') {  //using recursion to realize the matching of '*'
